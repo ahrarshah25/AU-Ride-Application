@@ -20,7 +20,7 @@ let Sends = `
             `
 document.getElementById("para").innerHTML = Sends;
 
-const phone = URLSearchParams(window.location.search).get("phone");
+const phone = new URLSearchParams(window.location.search).get("phone");
 
 const verifyOtp = async () => {
     const otp = document.querySelector(".otp");

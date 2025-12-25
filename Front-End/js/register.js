@@ -42,7 +42,7 @@ const registerUser = async () => {
     const userLastName = localStorage.getItem("lastName");
     const userPhone = localStorage.getItem("number");
 
-    const {data , error} = await supabase.signInWithOtp({
+    const {data , error} = await supabase.auth.signInWithOtp({
         phone: userPhone,
         options: {
             data: {

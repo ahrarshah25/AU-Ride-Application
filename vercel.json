@@ -1,0 +1,26 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/Front-End/index.html"
+    },
+    {
+      "source": "/auth/:page",
+      "destination": "/Front-End/auth/:page.html"
+    },
+    {
+      "source": "/css/:file",
+      "destination": "/Front-End/css/:file"
+    },
+    {
+      "source": "/js/:file",
+      "destination": "/Front-End/js/:file"
+    },
+    {
+      "source": "/assets/:file",
+      "destination": "/Front-End/assets/:file"
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+@import 'https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Volkhov:ital,wght@0,400;0,700;1,400;1,700&display=swap';
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     overflow: hidden;
+     font-family: "Roboto", sans-serif;
+ }
+
+ .images {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 40px;
+     height: 100vh;
+
+ }
+
+ .images button {
+     padding: 30px;
+     background-color: #AAEA36;
+     color: rgb(0, 0, 0);
+     border: none;
+     border-radius: 20px;
+     cursor: pointer;
+
+ }
+
+ .images i {
+     font-size: 50px;
+ }
+
+ h3 {
+     text-align: center;
+     color: #303030;
+     margin-top: 10px;
+ }
+
+ .adjusted {
+     padding: 20px;
+ }
+
+ .back-icon {
+     margin-bottom: 10px;
+     margin-left: -10px;
+ }

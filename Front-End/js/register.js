@@ -66,7 +66,7 @@ const registerUser = async () => {
 
         setInterval(() => {
             window.location.href = `verify?phone=${userPhone}`;;
-        }, 1200)
+        }, 9000)
     }
 }
 

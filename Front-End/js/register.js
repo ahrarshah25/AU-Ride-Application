@@ -31,9 +31,8 @@ const getInformation = () => {
             icon: "error"
         })
     } else {
-        localStorage.setItem("firstName", firstName)
-        localStorage.setItem("lastName", lastName)
-        window.location.href = "verify.html"
+        localStorage.setItem("firstName", firstName);
+        localStorage.setItem("lastName", lastName);
     }
 }
 

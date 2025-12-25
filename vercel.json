@@ -3,24 +3,24 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/css/:path*",
+      "destination": "/Front-End/css/:path*"
+    },
+    {
+      "source": "/js/:path*",
+      "destination": "/Front-End/js/:path*"
+    },
+    {
+      "source": "/assets/:path*",
+      "destination": "/Front-End/assets/:path*"
+    },
+    {
+      "source": "/auth/:path*",
+      "destination": "/Front-End/auth/:path*.html"
+    },
+    {
       "source": "/",
       "destination": "/Front-End/index.html"
-    },
-    {
-      "source": "/auth/:page",
-      "destination": "/Front-End/auth/:page.html"
-    },
-    {
-      "source": "/css/:file",
-      "destination": "/Front-End/css/:file"
-    },
-    {
-      "source": "/js/:file",
-      "destination": "/Front-End/js/:file"
-    },
-    {
-      "source": "/assets/:file",
-      "destination": "/Front-End/assets/:file"
     }
   ]
 }

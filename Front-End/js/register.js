@@ -20,7 +20,7 @@ let Sends = `
             `
 document.getElementById("para").innerHTML = Sends;
 
-const getInformation = () => {
+function getInformation() {
     let firstName = document.getElementById("firstName").value.trim();
     let lastName = document.getElementById("lastName").value.trim();
 
@@ -36,10 +36,11 @@ const getInformation = () => {
     }
 }
 
-const registerUser = async () => {
+async function registerUser() {
     const userFirstName = localStorage.getItem("firstName");
     const userLastName = localStorage.getItem("lastName");
-    const userPhone = localStorage.getItem("number");
+    const userPhoneLocal = localStorage.getItem("number");
+    const userPhone = "+92"+userPhoneLocal
 
     const {data , error} = await supabase.auth.signInWithOtp({
         phone: userPhone,
@@ -60,7 +61,7 @@ const registerUser = async () => {
 
         Swal.fire({
             title: "OTP Sent!",
-            text: "OTP To Your Number " + "92 " + userPhone + "Has Been Sent Successfully!",
+            text: "OTP To Your Number " + "92 " + userPhoneLocal + "Has Been Sent Successfully!",
             icon: "success"
         });
 

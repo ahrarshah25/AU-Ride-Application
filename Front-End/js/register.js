@@ -43,13 +43,7 @@ async function registerUser() {
     const userPhone = "+92"+userPhoneLocal
 
     const {data , error} = await supabase.auth.signInWithOtp({
-        phone: userPhone,
-        options: {
-            data: {
-                firstName: userFirstName,
-                lastName: userLastName || ""
-            }
-        }
+        phone: userPhone
     });
 
     if(error){
@@ -58,8 +52,10 @@ async function registerUser() {
             text: "Database Error: " + error.message,
             icon: "error",
         });
+        return;
+    };
 
-        Swal.fire({
+    Swal.fire({
             title: "OTP Sent!",
             text: "OTP To Your Number " + "92 " + userPhoneLocal + "Has Been Sent Successfully!",
             icon: "success"
@@ -68,7 +64,6 @@ async function registerUser() {
         setInterval(() => {
             window.location.href = `verify?phone=${userPhone}`;;
         }, 9000)
-    }
 }
 
 const completeBtn = document.getElementById("completeBtn");
@@ -83,4 +78,4 @@ completeBtn.addEventListener('click', (e) => {
 });
 
 const registerBrn = document.getElementById("registerBrn");
-registerBrn.addEventListener('click' , registerUser());
+registerBrn.addEventListener('click' , registerUser);

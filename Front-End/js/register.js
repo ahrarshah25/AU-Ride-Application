@@ -66,7 +66,7 @@ const registerUser = async () => {
         });
 
         setInterval(() => {
-            window.location.href = `/auth/verify?phone=${userPhone}`;
+            window.location.href = `verify?phone=${userPhone}`;;
         }, 1200)
     }
 }
@@ -77,9 +77,10 @@ completeBtn.addEventListener('click', (e) => {
     const key = e.keyCode || e.which;
     if (key === 13) {
         getInformation();
-        registerUser();
         return;
     }
     getInformation();
-    registerUser();
 });
+
+const registerBrn = document.getElementById("registerBrn");
+registerBrn.addEventListener('click' , registerUser());

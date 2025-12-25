@@ -19,6 +19,26 @@
       "destination": "/Front-End/auth/:path*.html"
     },
     {
+      "source": "/verify",
+      "destination": "/Front-End/auth/verify.html"
+    },
+    {
+      "source": "/welcome",
+      "destination": "/Front-End/auth/welcome.html"
+    },
+    {
+      "source": "/user",
+      "destination": "/Front-End/auth/user.html"
+    },
+    {
+      "source": "/finish",
+      "destination": "/Front-End/auth/finish.html"
+    },
+    {
+      "source": "/dashboard",
+      "destination": "/Front-End/auth/dashboard.html"
+    },
+    {
       "source": "/",
       "destination": "/Front-End/index.html"
     }

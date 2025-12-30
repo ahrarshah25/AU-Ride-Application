@@ -1,40 +1,32 @@
 {
   "rewrites": [
     {
-      "source": "/css/:path*",
-      "destination": "/Front-End/css/:path*"
-    },
-    {
-      "source": "/js/:path*",
-      "destination": "/Front-End/js/:path*"
-    },
-    {
-      "source": "/assets/:path*",
-      "destination": "/Front-End/assets/:path*"
-    },
-    {
-      "source": "/auth/:path*",
-      "destination": "/Front-End/auth/:path*.html"
-    },
-    {
       "source": "/verify",
       "destination": "/Front-End/auth/verify.html"
     },
     {
-      "source": "/welcome",
-      "destination": "/Front-End/auth/welcome.html"
+      "source": "/login",
+      "destination": "/Front-End/auth/login.html"
     },
     {
       "source": "/user",
       "destination": "/Front-End/auth/user.html"
     },
     {
-      "source": "/finish",
-      "destination": "/Front-End/auth/finish.html"
+      "source": "/signup",
+      "destination": "/Front-End/auth/signup.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/Front-End/auth/terms.html"
+    },
+    {
+      "source": "/profile",
+      "destination": "/Front-End/auth/profile.html"
     },
     {
       "source": "/dashboard",
-      "destination": "/Front-End/auth/dashboard.html"
+      "destination": "/Front-End/dashboard/dashboard.html"
     },
     {
       "source": "/",

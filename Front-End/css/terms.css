@@ -1,0 +1,19 @@
+.terms-box {
+    margin-top: 15px;
+    max-height: 55vh;
+    overflow-y: auto;
+    padding-right: 5px;
+}
+
+.terms-box p {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.terms-box h3 {
+    font-size: 15px;
+    font-weight: 500;
+    margin: 15px 0 6px;
+}

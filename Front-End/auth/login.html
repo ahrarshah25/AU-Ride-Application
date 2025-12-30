@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - AU Ride</title>
+  <link rel="stylesheet" href="/Front-End/css/auth.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+  <div class="adjusted">
+    <div class="back-icon">
+      <a href="index.html">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 18L9 12L15 6"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="headings">
+      <h1>Welcome Back</h1>
+      <p>Log in to your account</p>
+    </div>
+
+    <form id="loginForm">
+      <div class="phone-wrapper">
+        <input id="loginEmail" type="email" placeholder="Email" required />
+      </div>
+
+      <div class="phone-wrapper password-wrapper">
+        <input id="loginPassword" type="password" placeholder="Password" required />
+        <i class="fa-solid fa-eye togglePassword"></i>
+      </div>
+
+      <div class="continue">
+        <button type="submit" style="cursor: pointer;">Login</button>
+      </div>
+
+      <div class="continue">
+        <button type="button" class="google-btn" style="cursor: pointer;">
+          <i class="fa-brands fa-google"></i> Continue with Google
+        </button>
+      </div>
+
+      <p class="switchForm">
+        Don't have an account? <a href="signup.html">Sign up</a>
+      </p>
+    </form>
+  </div>
+</body>
+<script type="module" src="/Front-End/js/login.js"></script>
+</html>

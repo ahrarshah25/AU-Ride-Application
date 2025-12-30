@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Profile</title>
+
+  <link rel="stylesheet" href="/Front-End/css/profile.css" />
+  <link rel="stylesheet" href="/Front-End/css/auth.css">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    crossorigin="anonymous"
+  />
+</head>
+
+<body>
+  <div class="adjusted">
+
+    <div class="headings">
+      <h1>Edit Profile</h1>
+    </div>
+
+    <div class="profile-pic-wrapper">
+      <img id="profilePreview" src="https://via.placeholder.com/100" />
+      <label for="profileImage">
+        <i class="fa-solid fa-pen"></i>
+      </label>
+      <input type="file" id="profileImage" accept="image/*" hidden />
+    </div>
+
+    <div class="phone-wrapper">
+      <input type="text" placeholder="Name" />
+    </div>
+
+    <div class="phone-wrapper">
+      <input type="text" placeholder="Surname" />
+    </div>
+
+    <div class="phone-wrapper">
+      <div class="country">
+        <img src="https://flagcdn.com/w20/pk.png" />
+        <span>+92</span>
+      </div>
+      <input type="tel" placeholder="300 1234567" />
+    </div>
+
+    <div class="continue">
+      <button>Save Changes</button>
+    </div>
+
+  </div>
+
+  
+</body>
+<script src="/Front-End/js/profile.js"></script>
+</html>

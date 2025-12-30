@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up - AU Ride</title>
+  <link rel="stylesheet" href="/Front-End/css/auth.css" />
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    crossorigin="anonymous"
+  />
+</head>
+<body>
+  <div class="adjusted">
+    <div class="back-icon">
+      <a href="login.html">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 18L9 12L15 6"
+            stroke="black"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+    <div class="headings">
+      <h1>Create Account</h1>
+      <p>Sign up to get started</p>
+    </div>
+
+    <form id="signupForm">
+        <div class="phone-wrapper">
+        <input id="userName" type="text" placeholder="Name" />
+      </div>
+
+      <div class="phone-wrapper">
+        <input id="signupEmail" type="email" placeholder="Email" />
+      </div>
+
+      <div class="phone-wrapper password-wrapper">
+        <input id="signupPassword" type="password" placeholder="Password" />
+        <i class="fa-solid fa-eye togglePassword"></i>
+      </div>
+
+      <div class="phone-wrapper password-wrapper">
+        <input id="signupConfirm" type="password" placeholder="Confirm Password" />
+        <i class="fa-solid fa-eye togglePassword"></i>
+      </div>
+
+      <div class="continue">
+        <button id="userSignup" type="submit" style="cursor: pointer;">Sign Up</button>
+      </div>
+
+      <div class="continue">
+        <button type="button" class="google-btn" style="cursor: pointer;">
+          <i class="fa-brands fa-google"></i> Continue with Google
+        </button>
+      </div>
+
+      <p class="switchForm">Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+<script type="module" src="/Front-End/js/signup.js"></script>
+</html>

@@ -1,0 +1,38 @@
+.profile-pic-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0;
+    position: relative;
+}
+
+.profile-pic-wrapper img {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ddd;
+}
+
+.profile-pic-wrapper label {
+    position: absolute;
+    bottom: 4px;
+    right: calc(50% - 55px);
+    background: #262626;
+    color: #fff;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    .profile-pic-wrapper img {
+        width: 95px;
+        height: 95px;
+    }
+}

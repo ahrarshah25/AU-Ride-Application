@@ -1,6 +1,6 @@
 console.log("SIGNUP PAGE!");
 
-async function userSignup(){
+async function userSignup() {
     let userName = document.getElementById("userName");
     let userEmail = document.getElementById("signupEmail");
     let userPassword = document.getElementById("signupPassword");
@@ -8,7 +8,7 @@ async function userSignup(){
     const regex = /^[a-zA-Z0-9._%+-]+@(gmail\.com|yahoo\.com|outlook\.com|hotmail\.com)$/;
     const accType = localStorage.getItem("accountType");
 
-    if(!userName.value.trim() || !userEmail.value.trim() || !userPassword.value.trim() || !confirmPassword.value.trim()){
+    if (!userName.value.trim() || !userEmail.value.trim() || !userPassword.value.trim() || !confirmPassword.value.trim()) {
         Swal.fire({
             title: "Error!",
             text: "Please fill all the feilds.",
@@ -21,7 +21,7 @@ async function userSignup(){
         return;
     }
 
-    if(!regex.test(userEmail.value)){
+    if (!regex.test(userEmail.value)) {
         Swal.fire({
             title: "Error!",
             text: "Please enter email with correct syntax.\nFor Example: name@domain.com",
@@ -31,7 +31,7 @@ async function userSignup(){
         return;
     }
 
-    if(userPassword.value.trim().lenght < 8){
+    if (userPassword.value.trim().length < 8) {
         Swal.fire({
             title: "Error!",
             text: "Password should contain 8 character.",
@@ -42,7 +42,7 @@ async function userSignup(){
         return;
     }
 
-    if(userPassword.value !== confirmPassword.value){
+    if (userPassword.value !== confirmPassword.value) {
         Swal.fire({
             title: "Error!",
             text: "Confirm password should be equal to your password.\nGuide: Please enter correct password in confirm password section.",
@@ -54,30 +54,34 @@ async function userSignup(){
     }
 
     try {
-        const backend = "https://au-ride-backend.vercel.app/auth/signup";
+        const backend = "https://au-ride-backend.vercel.app/api/auth/signup";
 
-        const response = await fetch(backend , {
+        const response = await fetch(backend, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({
-                userName,
-                userEmail,
-                userPassword,
-                accountType: accType
+                name: userName.value,
+                email: userEmail.value,
+                pass: userPassword.value,
+                type: accType
             })
-        });
 
+        });
+        localStorage.clear();
+        
         const data = await response.json();
 
-        if(response.ok){
+        if (response.ok) {
             Swal.fire({
                 title: "Success!",
-                text: "Signup Successfully!\nWelcome: " + userName,
+                text: "Signup Successfully!\nWelcome: " + userName.value,
                 icon: "success"
+            })
+            .then(() => {
+                window.location.href = "/profile";
             });
-            window.location.href = "/profile";
         } else {
             Swal.fire({
                 title: "Error!",
@@ -98,21 +102,21 @@ async function userSignup(){
 
 const toggles = document.querySelectorAll(".togglePassword");
 toggles.forEach((toggle) => {
-  toggle.addEventListener("click", () => {
-    const input = toggle.previousElementSibling;
-    const type = input.type === "password" ? "text" : "password";
-    input.type = type;
-    toggle.classList.toggle("fa-eye-slash");
-  });
+    toggle.addEventListener("click", () => {
+        const input = toggle.previousElementSibling;
+        const type = input.type === "password" ? "text" : "password";
+        input.type = type;
+        toggle.classList.toggle("fa-eye-slash");
+    });
 });
 
 const userSignupBtn = document.getElementById("userSignup");
-userSignupBtn.addEventListener('click' , (e) => {
+userSignupBtn.addEventListener('click', (e) => {
     e.preventDefault();
     const key = e.keyCode || e.which;
-    if(key === 13){
+    if (key === 13) {
         userSignup();
         return;
     };
-    userSignup()
-})
+    userSignup();
+});

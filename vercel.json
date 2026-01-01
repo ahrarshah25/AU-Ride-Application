@@ -1,16 +1,12 @@
 {
   "rewrites": [
     {
-      "source": "/verify",
-      "destination": "/Front-End/auth/verify.html"
-    },
-    {
       "source": "/login",
       "destination": "/Front-End/auth/login.html"
     },
     {
       "source": "/user",
-      "destination": "/Front-End/auth/user.html"
+      "destination": "/Front-End/user/user.html"
     },
     {
       "source": "/signup",
@@ -18,11 +14,11 @@
     },
     {
       "source": "/terms",
-      "destination": "/Front-End/auth/terms.html"
+      "destination": "/Front-End/documents/terms.html"
     },
     {
       "source": "/profile",
-      "destination": "/Front-End/auth/profile.html"
+      "destination": "/Front-End/user/profile.html"
     },
     {
       "source": "/dashboard",
@@ -30,6 +26,14 @@
     },
     {
       "source": "/",
+      "destination": "/Front-End/index.html"
+    },
+    {
+      "source": "/home",
+      "destination": "/Front-End/index.html"
+    },
+    {
+      "source": "#home",
       "destination": "/Front-End/index.html"
     }
   ]

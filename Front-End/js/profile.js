@@ -20,7 +20,9 @@ imageInput.addEventListener("change", () => {
 async function loadProfile() {
   try {
     const backend = "https://au-ride-backend.vercel.app/api/profile/get";
-    const res = await fetch(backend);
+    const res = await fetch(backend , {
+      credentials: "include"
+    });
     const data = await res.json();
 
     if (!data.exists) {
@@ -62,7 +64,8 @@ async function saveProfile() {
 
     const res = await fetch(backend, {
       method: "POST",
-      body: formData
+      body: formData,
+      credentials: "include"
     });
 
     const data = await res.json();

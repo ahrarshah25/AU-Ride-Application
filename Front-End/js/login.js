@@ -38,11 +38,13 @@ async function userLogin() {
       body: JSON.stringify({
         email: userEmail.value,
         password: userPassword.value
-      })
-
+      }),
+      credentials: "include"
     });
 
     const data = await response.json();
+
+    localStorage.setItem("token", data.token);
 
     if (response.ok) {
       Swal.fire({

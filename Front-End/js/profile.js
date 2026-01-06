@@ -18,7 +18,10 @@ async function loadProfile() {
       "https://au-ride-backend.vercel.app/api/profile/get",
       { 
         method: "GET",
-        credentials: "include" 
+        credentials: "include" ,
+        headers: { 
+    "Authorization": "Bearer " + localStorage.getItem("token")
+  }
       }
     );
 

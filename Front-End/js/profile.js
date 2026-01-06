@@ -1,6 +1,6 @@
 console.log("Profile Page!");
 
-const { Client, Account, Databases, Storage, ID, Query } = Appwrite;
+const { Client, Account, Databases, Storage, ID, Query } = window.Appwrite;
 
 const client = new Client()
   .setEndpoint("https://cloud.appwrite.io/v1")
@@ -25,9 +25,7 @@ imageInput.addEventListener("change", () => {
   if (!file) return;
 
   const reader = new FileReader();
-  reader.onload = () => {
-    preview.src = reader.result;
-  };
+  reader.onload = () => preview.src = reader.result;
   reader.readAsDataURL(file);
 });
 
@@ -56,15 +54,13 @@ async function loadProfile() {
     }
 
     const profile = res.documents[0];
-
     nameInput.value = profile.name || "";
     phoneInput.value = profile.phone || "";
 
-    if (profile.avatarId) {
-      preview.src = storage.getFileView(BUCKET_ID, profile.avatarId);
-    } else {
-      preview.src = "/Front-End/assets/default.png";
-    }
+    preview.src = profile.avatarId
+      ? storage.getFileView(BUCKET_ID, profile.avatarId)
+      : "/Front-End/assets/default.png";
+
   } catch (err) {
     console.error(err);
     preview.src = "/Front-End/assets/default.png";
@@ -74,7 +70,6 @@ async function loadProfile() {
 async function saveProfile() {
   try {
     const user = await getCurrentUser();
-
     let avatarId = null;
 
     if (imageInput.files[0]) {
@@ -127,5 +122,4 @@ async function saveProfile() {
 }
 
 saveBtn.addEventListener("click", saveProfile);
-
 loadProfile();
